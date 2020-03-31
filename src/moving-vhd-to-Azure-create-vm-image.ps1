@@ -1,4 +1,4 @@
-AzureRM.Profile\Login-AzureRmAccount
+Connect-AzAccount
 $subscriptionName = "Your Subscription Name"
 $subscriptionId = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 $tenantId ="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
