@@ -1,5 +1,7 @@
-# Moving-VHD-to-Azure-with-PowerShell-and-create-VM-image
-Moving VHD to Azure with PowerShell and create VM image
+# Move VHD to Azure using PowerShell and create VM image
+This script will help you move VHD to Azure using PowerShell and create VM image
+
+## update with Az Module available
 
 ## Blog Post reference
  Article: https://wikiazure.com/compute/mover-vhd-hacia-azure-usando-powershell/
