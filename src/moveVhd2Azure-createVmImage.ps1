@@ -7,6 +7,7 @@ $location = 'EastUS'
 $vhdName = 'Your-VHD-Name.vhd'
 $imageName = 'Your-Image-Name'
 $containerName = "Your-Container-Name"
+#Be sure to provide a valid storage account name. Storage account name must be between 3 and 24 characters in length and use numbers and lower-case letters only.
 $storageAccountName = "Your-Storage-Account-Name"
 
 #Set the Subscription to use in the current session
@@ -31,8 +32,8 @@ Add-AzVhd -ResourceGroupName $resourceGroupName -Destination $urlOfUploadedImage
 # Create a managed image from the uploaded VHD
 $imageConfig = New-AzImageConfig -Location $location
 
-#set the managed disk from the image
-$imageConfig = Set-AzImageOsDisk -Image $imageConfig -OsType Windows -OsState Generalized `
+#set the managed disk from the image, ensure to select the correct OS Type (Windows or Linux)
+$imageConfig = Set-AzImageOsDisk -Image $imageConfig -OsType Linux -OsState Generalized `
     -BlobUri $urlOfUploadedImageVhd
 
 #Create image
