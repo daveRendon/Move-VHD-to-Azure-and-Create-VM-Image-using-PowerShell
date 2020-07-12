@@ -23,8 +23,7 @@ New-AzStorageContainer -Name $containerName -Context $ctx -Permission blob
 $localPath = 'Path-to-Your-VHD-File.vhd'
 
 # set the url of the image and move the vhd, also use the -overwrite option since process might fail sporadically
-# -overwrite solves the error Add-AzureRmVhd : The pipeline was not run because a pipeline is already running.
-# Pipelines cannot be run concurrently
+# -overwrite solves the error "The pipeline was not run because a pipeline is already running."
 $urlOfUploadedImageVhd = ('https://' + $storageAccountName + '.blob.core.windows.net/' + $containerName  + '/' + $vhdName)
 Add-AzVhd -ResourceGroupName $resourceGroupName -Destination $urlOfUploadedImageVhd `
 -LocalFilePath $localPath -OverWrite
