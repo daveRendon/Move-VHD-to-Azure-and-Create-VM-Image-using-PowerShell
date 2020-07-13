@@ -33,7 +33,7 @@ Add-AzVhd -ResourceGroupName $resourceGroupName -Destination $urlOfUploadedImage
 $imageConfig = New-AzImageConfig -Location $location
 
 #set the managed disk from the image, ensure to select the correct OS Type (Windows or Linux)
-$imageConfig = Set-AzImageOsDisk -Image $imageConfig -OsType Linux -OsState Generalized `
+$imageConfig = Set-AzImageOsDisk -Image $imageConfig -OsType Windows -OsState Generalized `
     -BlobUri $urlOfUploadedImageVhd
 
 #Create image
